@@ -3,14 +3,13 @@ public class TestaMetodo {
 	
 	public static void main(String[] args) {
 		
-		Cliente fulana = new Cliente();
-		fulana.nome = "Fulana";
-		fulana.cpf = "111.111.111-11";
-		fulana.profissao = "Analista";
+		//abaixo, duas maneiras possíveis de fazer o link de uma conta a um cliente
 		Conta contaFulana = new Conta();
 		contaFulana.saldo = 100;
-		contaFulana.titular = fulana;
-		
+		contaFulana.titular = new Cliente();
+		contaFulana.titular.nome = "Fulana";
+		contaFulana.titular.cpf = "111.111.111-11";
+		contaFulana.titular.profissao = "Analista";
 		
 		Cliente beltrana = new Cliente();
 		beltrana.nome = "Beltrana";
