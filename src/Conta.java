@@ -1,7 +1,7 @@
 
 public class Conta {
 	//atributos: especificações da Conta que serão usadas para criar um objeto do tipo Conta.
-	double saldo; //valor padrão dessas variáveis é zero, diferente de uma variável dentro da main class que não tem valor algum;
+	private double saldo; //valor padrão dessas variáveis é zero, diferente de uma variável dentro da main class que não tem valor algum;
 	int agencia;
 	int numero;
 	Cliente titular;
@@ -27,5 +27,9 @@ public class Conta {
 			return true;
 		}
 		return false;
+	}
+	
+	public double pegaSaldo() {
+		return this.saldo;
 	}
 }
