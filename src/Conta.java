@@ -7,8 +7,8 @@ public class Conta {
 	private Cliente titular;
 	
 	
-	public void deposita(double valor) { //o deposita é o método, enquanto o valor é o parâmetro. O void é usado uma vez que não há retorno 
-	//à ação de deposita (por exemplo, poderia retornar um comprovante)
+	public void deposita(double valor) { /*deposita é o método, enquanto o valor é o parâmetro. O void é usado uma vez que não há retorno 
+	à ação de deposita (por exemplo, poderia retornar um comprovante)*/
 		this.saldo = this.saldo+valor; //saldo é um atributo e valor é uma variável
 	}
 	
@@ -39,6 +39,10 @@ public class Conta {
 	}
 	
 	public void setNumero (int numero) {
+		if(numero <= 0) {
+			System.out.println("O número da conta não pode ser menor ou igual a zero");
+			return;
+		}
 		this.numero = numero;
 	}
 	
@@ -47,6 +51,10 @@ public class Conta {
 	}
 	
 	public void setAgencia(int agencia) {
+		if(agencia <= 0) {
+			System.out.println("O número da agência não pode ser menor ou igual a zero");
+			return;
+		}	
 		this.agencia = agencia;
 	}
 	
@@ -56,5 +64,14 @@ public class Conta {
 	
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
+	}
+	
+	/*É possível informar uma rotina de inicialização através de um construtor, como no ex abaixo, em que
+	é preciso informar agência e número de conta para criar uma nova conta*/
+	
+	public Conta (int agencia, int numero) {
+		this.agencia = agencia;
+		this.numero = numero;
+		
 	}
 }

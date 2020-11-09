@@ -4,7 +4,7 @@ public class TestaMetodo {
 	public static void main(String[] args) {
 		
 		//abaixo, duas maneiras possíveis de fazer o link de uma conta a um cliente
-		Conta contaFulana = new Conta();
+		Conta contaFulana = new Conta(001, 1234);
 		contaFulana.setNumero(1230);
 		contaFulana.deposita(100.00);
 		contaFulana.setTitular(new Cliente());
@@ -16,7 +16,7 @@ public class TestaMetodo {
 		beltrana.setNome("Beltrana");
 		beltrana.setCpf("222.222.222-22");
 		beltrana.setProfissao("Contadora");
-		Conta contaBeltrana = new Conta();
+		Conta contaBeltrana = new Conta(001, 3214);
 		contaBeltrana.deposita(1000);
 		contaBeltrana.setTitular(beltrana);
 		
