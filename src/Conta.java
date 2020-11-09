@@ -5,6 +5,7 @@ public class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
+	private static int total; //static significa que o atributo é da classe e não da instância
 	
 	
 	public void deposita(double valor) { /*deposita é o método, enquanto o valor é o parâmetro. O void é usado uma vez que não há retorno 
@@ -70,8 +71,12 @@ public class Conta {
 	é preciso informar agência e número de conta para criar uma nova conta*/
 	
 	public Conta (int agencia, int numero) {
+		Conta.total++;
 		this.agencia = agencia;
-		this.numero = numero;
-		
+		this.numero = numero;		
+	}
+	
+	public static int getTotal() {
+		return Conta.total;
 	}
 }

@@ -4,7 +4,7 @@ public class TestaMetodo {
 	public static void main(String[] args) {
 		
 		//abaixo, duas maneiras possíveis de fazer o link de uma conta a um cliente
-		Conta contaFulana = new Conta(001, 1234);
+		Conta contaFulana = new Conta(001, 1234); //referenciando o número de agência e conta;
 		contaFulana.setNumero(1230);
 		contaFulana.deposita(100.00);
 		contaFulana.setTitular(new Cliente());
@@ -18,14 +18,11 @@ public class TestaMetodo {
 		beltrana.setProfissao("Contadora");
 		Conta contaBeltrana = new Conta(001, 3214);
 		contaBeltrana.deposita(1000);
-		contaBeltrana.setTitular(beltrana);
-		
-		
+		contaBeltrana.setTitular(beltrana);		
 		
 		//o método deposita() altera o saldo, que é uma especificação de Conta;
 		contaFulana.deposita(200);		
-		//System.out.println("O saldo da conta da Fulana é "+contaFulana.saldo);
-		
+	
 		//chamando o método saca
 		if(contaFulana.saca(100)) {
 			System.out.println("Saque feito com sucesso! Saldo atual da "+contaFulana.getTitular().getNome()+" é "+contaFulana.getSaldo());
@@ -41,7 +38,11 @@ public class TestaMetodo {
 		}else {
 			System.out.println("Saldo insuficiente");
 		}
+		
+		
+		System.out.println("Hoje abrimos "+Conta.getTotal()+" contas");
 
 	}
+	
 
 }
