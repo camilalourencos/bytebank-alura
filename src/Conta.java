@@ -1,5 +1,5 @@
 
-public class Conta {
+public abstract class Conta {
 	//atributos: especificações da Conta que serão usadas para criar um objeto do tipo Conta.
 	private double saldo; //valor padrão dessas variáveis é zero, diferente de uma variável dentro da main class que não tem valor algum;
 	private int agencia;
