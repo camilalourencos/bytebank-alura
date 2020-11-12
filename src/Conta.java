@@ -7,6 +7,14 @@ public class Conta {
 	private Cliente titular;
 	private static int total; //static significa que o atributo é da classe e não da instância
 	
+	/*É possível informar uma rotina de inicialização através de um construtor, como no ex abaixo, em que
+	é preciso informar agência e número de conta para criar uma nova conta*/
+	
+	public Conta (int agencia, int numero) {
+		Conta.total++;
+		this.agencia = agencia;
+		this.numero = numero;		
+	}
 	
 	public void deposita(double valor) { /*deposita é o método, enquanto o valor é o parâmetro. O void é usado uma vez que não há retorno 
 	à ação de deposita (por exemplo, poderia retornar um comprovante)*/
@@ -67,14 +75,6 @@ public class Conta {
 		this.titular = titular;
 	}
 	
-	/*É possível informar uma rotina de inicialização através de um construtor, como no ex abaixo, em que
-	é preciso informar agência e número de conta para criar uma nova conta*/
-	
-	public Conta (int agencia, int numero) {
-		Conta.total++;
-		this.agencia = agencia;
-		this.numero = numero;		
-	}
 	
 	public static int getTotal() {
 		return Conta.total;
